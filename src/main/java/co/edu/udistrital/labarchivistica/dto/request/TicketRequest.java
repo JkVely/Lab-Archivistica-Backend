@@ -1,0 +1,16 @@
+package co.edu.udistrital.labarchivistica.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class TicketRequest {
+    @NotBlank
+    private String subject;
+
+    private String description;
+}
