@@ -1,18 +1,6 @@
 spring:
   application:
     name: lab-archivistica-backend
-  datasource:
-    url: jdbc:postgresql://localhost:5432/lab_archivistica
-    username: ${DB_USERNAME:tu_usuario}
-    password: ${DB_PASSWORD:tu_password}
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-  flyway:
-    enabled: true
   servlet:
     multipart:
       max-file-size: 20MB
