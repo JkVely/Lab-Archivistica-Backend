@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: lab-archivistica-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lab_archivistica
+    username: ${DB_USERNAME:tu_usuario}
+    password: ${DB_PASSWORD:tu_password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+app:
+  jwt-secret: ${JWT_SECRET:clave-minimo-32-caracteres}
+  jwt-expiration: ${JWT_EXPIRATION:86400000}
+  upload-dir: ${UPLOAD_DIR:/var/www/lab-archivistica/documentos/}
