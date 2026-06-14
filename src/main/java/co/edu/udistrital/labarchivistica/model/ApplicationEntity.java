@@ -19,8 +19,12 @@ public class ApplicationEntity extends BaseEntity {
     @Column(columnDefinition = "text")
     private String description;
 
+    @Column(length = 500)
     private String accessUrl;
 
     @Column(length = 100)
     private String category;
+
+    @Column(length = 500)
+    private String iconUrl;
 }
